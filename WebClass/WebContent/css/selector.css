@@ -1,0 +1,30 @@
+@CHARSET "EUC-KR";
+
+/* 林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍林籍 */
+
+* {
+	color: blue;
+	text-align: center;
+}
+
+h3 {
+	color: pink;
+	text-align: right;
+}
+
+h1 {
+	background-color: yellow;
+	border: 2px solid;
+}
+
+#text1 {
+	font-weight: bold;
+}
+
+.text2{
+	font-style: italic;	
+}
+
+h1,h3{
+	text-decoration: underline;
+}

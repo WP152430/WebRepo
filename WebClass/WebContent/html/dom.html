@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+</head>
+<body>
+	<div id="d">
+		<p id="p">원래 있는 문단</p>
+	</div>
+	<script>
+		var newnode = document.createElement("p")
+		var tnode = document.createTextNode("새로운 문단 만들기")
+		newnode.appendChild(tnode)
+		var d = document.getElementById("d")
+		d.appendChild(newnode)
+		var p = document.getElementById("p")
+		d.removeChild(p);
+	</script>
+</body>
+</html>

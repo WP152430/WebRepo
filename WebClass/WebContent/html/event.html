@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event</title>
+<style>
+.bgYellow {
+	background-color: yellow;
+}
+
+.bgBlue {
+	background-color: blue;
+}
+
+.bgWhite {
+	background-color: white;
+}
+.border {
+	border: 3px solid red;
+}
+</style>
+<script>
+	function changeColor(color) {
+		var c = document.getElementById("container")
+		c.setAttribute("class", color)
+	}
+	function toUpperCase(e) {
+		e.value = e.value.toUpperCase()
+	}
+	function a(a, e) {
+		e.setAttribute("class", a)
+	}
+</script>
+</head>
+<body onload="alert('웹 페이지 로딩됨')">
+	<div id="container">
+		<br> 
+		<input type="radio" name="color" onclick="changeColor('bgYellow')">노란색 
+		<input type="radio" name="color" onclick="changeColor('bgBlue')">파란색 
+		<input type="radio" name="color" onclick="changeColor('bgWhite')">원래대로
+		<br> <br> <input type="text" id="word"
+			onchange="toUpperCase(this)"> <br> <br>
+		<div id="box" onmouseover="a('border', this)" onmouseout="a('', this)">마우스을 여기로 올려놓으세요</div>
+	</div>
+
+</body>
+</html>
