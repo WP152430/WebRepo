@@ -56,7 +56,7 @@
 	    	<%=user.getName()%>님
 	      </a>
 	      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-	      <form id="form">
+	      <form id="logoutForm">
 	      	<button type="submit" class="dropdown-item">Sign out</button>
 	      </form>
 	       	<div class="dropdown-divider"></div>
@@ -264,7 +264,7 @@
 			});
 		});
 		$(document).ready(function() {
-			$('#form').submit(function(event) {
+			$('#logoutForm').submit(function(event) {
 				$.post("/WebClass/bloglogout", {
 				}, function(data) {
 					location.href="NewFile.jsp";
