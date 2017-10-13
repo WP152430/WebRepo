@@ -62,7 +62,7 @@ public class BlogLoginServlet extends HttpServlet {
 				session.setAttribute("pwd", pwd);
 				object.addProperty("msg", "success");
 				UserVO user = new UserVO();
-				user.setName(name);
+				user.setName("홍길동");
 				session.setAttribute("user", user);
 				
 			}else{

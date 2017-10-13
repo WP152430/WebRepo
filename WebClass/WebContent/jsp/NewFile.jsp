@@ -44,8 +44,7 @@
 					aria-label="ID" id="id" required> <input
 					class="form-control mr-sm-2" type="password" placeholder="PWD"
 					aria-label="PWD" id="pwd" required>
-							<input class="form-control mr-sm-2" type="text" placeholder="NAME"
-					aria-label="NAME" id="name" required>
+
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
     <%
     	}else{
@@ -246,18 +245,18 @@
 
 				var id = $('#id').val();
 				var pwd = $('#pwd').val();
-				var name = $('#name').val();
 
 				$.post("/WebClass/bloglogin", {
 					id : id,
-					pwd : pwd,
-					name : name
+					pwd : pwd
 				}, function(data) {
 					if('error' == data.msg){
 						var myModal = $('#myModal');
-						myModal.find('.modal-title').text('로그인 안 됨');
-						myModal.find('.modal-body').text('아이디가 틀림');
+						myModal.find('.modal-title').text('ERROR');
+						myModal.find('.modal-body').text('Wrong ID');
 						myModal.modal();
+						$('#pwd').val('');
+						
 					}else if('success'==data.msg){
 						location.href="NewFile.jsp";
 					}
